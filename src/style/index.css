@@ -1,0 +1,100 @@
+@import url('./variable.css');
+
+/* Border */
+.border-0 {
+  border: none;
+}
+
+.border-1 {
+  border: 1px;
+}
+
+/* Border Style */
+.border-solid {
+  border-style: solid;
+}
+
+/* Border Radius */
+.rounded {
+  border-radius: var(--base-unit);
+}
+
+/* Cursor */
+.pointer {
+  cursor: pointer;
+}
+
+/* Display */
+.flex {
+  display: flex;
+}
+
+/* Flex Direction */
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+
+/* Gap */
+.gap-1 {
+  gap: var(--base-unit);
+}
+
+.gap-2 {
+  gap: calc(var(--base-unit) * 2);
+}
+
+/* Padding */
+.p-0\.5 {
+  padding: calc(var(--base-unit) / 0.5 ); /* Padding 2 px */
+}
+
+.p-1 {
+  padding: var(--base-unit); /* Padding 4px */
+}
+
+.p-1\.5 {
+  padding: calc(var(--base-unit) * 1.5); /* Padding 6px */
+}
+
+.p-2 {
+  padding: calc(var(--base-unit) * 2); /* Padding 8px */
+}
+
+.p-3 {
+  padding: calc(var(--base-unit) * 3) /* Padding 12px */
+}
+
+/* Margin */
+.m-0 {
+  margin: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mt-2 {
+  margin-top: calc(var(--base-unit) * 2);
+}
+
+/* Position */
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+/* Height */
+.h-8 {
+  height: calc(var(--base-unit) * 8); /* Height 32px */
+}
+
+/* Width */
+.w-full {
+  width: 100%
+}

@@ -1,0 +1,9 @@
+@import url('../../style/variable.css');
+
+.custom-button {
+  background-color: var(--color-primary-700);
+  color: var(--color-white);
+  &:hover {
+    background-color: var(--color-primary-800);
+  }
+}

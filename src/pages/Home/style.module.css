@@ -1,0 +1,24 @@
+@import url('../../style/variable.css');
+
+.card-container {
+  width: 100%;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .card-container {
+    width: 30%;
+  }
+
+  .page-container {
+    flex-direction: row;
+    overflow: hidden;
+    flex-wrap: wrap;
+    gap: calc(var(--base-unit) * 4);
+  }
+}
