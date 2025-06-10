@@ -80,6 +80,11 @@
   margin-top: calc(var(--base-unit) * 2);
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Position */
 .absolute {
   position: absolute;
@@ -97,4 +102,8 @@
 /* Width */
 .w-full {
   width: 100%
+}
+
+.w-80p {
+  width: 80%;
 }

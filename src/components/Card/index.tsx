@@ -1,3 +1,4 @@
+import { numberToCurrency } from "../../utils"
 import Button from "../Button"
 import style from './style.module.css'
 
@@ -8,6 +9,8 @@ type CardProps = {
   image: string
   desc: string
   actionLabel: string
+  price: number
+  vat: number
   onClick: (data: string) => void
   isSelected?: boolean
 }
@@ -19,6 +22,8 @@ const Card: React.FC<CardProps> = ({
   image,
   desc,
   actionLabel,
+  price,
+  vat,
   isSelected,
   onClick
 }) => {
@@ -35,6 +40,22 @@ const Card: React.FC<CardProps> = ({
       <div>
         <h2 className="mb-0">{title}</h2>
         <p className={`m-0 ${style['subtitle']}`}>{subtitle}</p>
+        <h3
+          className="m-0 mt-2"
+          style={{
+            color: 'var(--color-primary-800)'
+          }}
+        >
+          {numberToCurrency.format(price)}
+        </h3>
+        <h4
+          className="m-0"
+          style={{
+            color: 'var(--color-success-800)'
+          }}
+        >
+          {numberToCurrency.format(vat)}
+        </h4>
       </div>
       <Button
         id={`action-${id}`}

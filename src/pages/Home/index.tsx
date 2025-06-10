@@ -3,6 +3,7 @@ import axios from "axios"
 import { IMAGE_URL, SKIP_SESSION_STORAGE } from "../../constants"
 import Card from "../../components/Card"
 import style from './style.module.css'
+import Checkbox from "../../components/Checkbox"
 
 const Home = () => {
   const [skipList, setSkipList] = useState<Record<string, string>[]>([])
@@ -20,8 +21,22 @@ const Home = () => {
   }, [])
   return(
     <div
-      className={`w-full p-4`}
+      className={`w-full p-4 flex`}
     >
+      <div
+        style={{
+          width: '100%',
+          height: '100vh',
+          maxHeight: '100vh',
+          overflowY: 'auto'
+        }}
+      >
+        <Checkbox
+          id="checkbox-1"
+          label="Checkbox label"
+          name="checkbox-1"
+        />
+      </div>
       <div className={style['page-container']}>
       {
         skipList.map((data) => (
@@ -36,6 +51,8 @@ const Home = () => {
               title={`${data.size} Yard Skip`}
               subtitle={`${data['hire_period_days']} day hire period`}
               actionLabel="Select"
+              price={Number(data['price_before_vat'])}
+              vat={Number(data.vat)}
               onClick={(id) => console.log(id)}
             />
           </div>
