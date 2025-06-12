@@ -1,0 +1,15 @@
+@import url('../../style/variable.css');
+
+.pill-button {
+  padding: 8px 16px;
+  border: 1px solid var(--color-primary-700);
+  border-radius: 2.5rem;
+  background-color: var(--color-white);
+  color: var(--color-black);
+
+  &:hover,
+  &.selected {
+    background-color: var(--color-primary-700);
+    color: var(--color-white);
+  }
+}

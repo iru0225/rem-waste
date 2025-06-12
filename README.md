@@ -1,54 +1,18 @@
-# React + TypeScript + Vite
+# Approach
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Reusability
+For reusability I create core component inside components folder and we can handle the view of the component based on the props that we give
 
-Currently, two official plugins are available:
+## Fetching data
+Since it's using the same data (static) so it will check the session storage first before fetch the data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Filter data
+Right now I only set to filter the data based on size, allow on road, and suitable for heave waste. Every selected filter will be show at the top of page.
 
-## Expanding the ESLint configuration
+## Mobile view
+For mobile view I'm using media query to handle the size of the element and show/hide status.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Next possible implementation
+* we can remove the local session and always fetch the list of items in realtime, and adding the unlimited scroll to fetch the new data based on pagination.
+* Adding more filters, and removing applied filters by click the filter pills at the top of the page
+* Separate the core component in it's own component library, and integrating it with storybook

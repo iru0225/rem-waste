@@ -6,4 +6,12 @@
   &:hover {
     background-color: var(--color-primary-800);
   }
+
+  &.danger {
+    background-color: var(--color-error-700);
+
+    &:hover {
+      background-color: var(--color-error-800);
+    }
+  }
 }

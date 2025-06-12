@@ -2,6 +2,7 @@ import style from './style.module.css'
 
 type ButtonProps = {
   id: string
+  variant?: 'primary' | 'danger'
   type: 'button' | 'submit'
   onClick?: () => void
   disabled?: boolean
@@ -12,6 +13,7 @@ type ButtonProps = {
 const Button: React.FC<ButtonProps> = ({
   id,
   type,
+  variant,
   children,
   disabled,
   className,
@@ -23,7 +25,7 @@ const Button: React.FC<ButtonProps> = ({
       type={type}
       disabled={disabled}
       onClick={onClick}
-      className={`h-8 p-2 w-full border-0 rounded pointer ${style['custom-button']} ${className}`}
+      className={`h-8 p-2 w-full border-0 rounded pointer ${style['custom-button']} ${variant === 'danger' ? style['danger'] : ''} ${className}`}
     >
       {children}
     </button>
