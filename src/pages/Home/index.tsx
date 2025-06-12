@@ -192,6 +192,8 @@ const Home = () => {
                   subtitle={`${data['hire_period_days']} day hire period`}
                   actionLabel={selectedItem === data.id ? 'Unselect' : 'Select'}
                   price={Number(data['price_before_vat'])}
+                  heavyWaste={!!data['allows_heavy_waste']}
+                  onRoad={!!data['allowed_on_road']}
                   vat={Number(data.vat)}
                   isSelected={selectedItem === data.id}
                   onClick={(id) => {
