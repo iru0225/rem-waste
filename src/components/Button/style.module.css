@@ -1,0 +1,17 @@
+@import url('../../style/variable.css');
+
+.custom-button {
+  background-color: var(--color-primary-700);
+  color: var(--color-white);
+  &:hover {
+    background-color: var(--color-primary-800);
+  }
+
+  &.danger {
+    background-color: var(--color-error-700);
+
+    &:hover {
+      background-color: var(--color-error-800);
+    }
+  }
+}

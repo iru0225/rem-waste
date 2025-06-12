@@ -1,0 +1,78 @@
+@import url('../../style/variable.css');
+
+.card-container {
+  width: 100%;
+}
+
+.page-container {
+  display: flex;
+  max-height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: calc(var(--base-unit) * 4);
+  padding: 24px;
+}
+
+@media (min-width: 768px) {
+  .page-container {
+    display: grid;
+    max-height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.filter-container {
+  width: 280px;
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.open-filter {
+  float: right;
+  width: 125px;
+  display: none;
+}
+
+.close-button {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .open-filter {
+    display: block;
+  }
+
+  .close-button {
+    display: block;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background: white;
+    border: 1px solid;
+    border-radius: 4px;
+    align-items: center;
+    vertical-align: middle;
+  }
+
+  .filter-container{
+    inset: 0;
+    left: -100%;
+    z-index: 1;
+    background-color: var(--color-white);
+    position: absolute;
+    transition: ease-in-out .3s;
+
+    &.open {
+      inset: 0;
+      bottom: -100%;
+      padding: 8px;
+    }
+  }
+}

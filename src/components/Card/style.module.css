@@ -1,0 +1,44 @@
+@import url('../../style/variable.css');
+
+.card-container {
+  &:hover,
+  &.selected {
+    border-color: var(--color-primary-700);
+    background-color: var(--color-primary-200);
+  }
+}
+
+.label-selected {
+  background-color: var(--color-primary-700);
+  font-size: calc(var(--base-unit) * 3);
+  font-weight: bold;
+  color: var(--color-white);
+  border-radius: 2.5rem;
+  top: calc(var(--base-unit) * 2);
+  right: calc(var(--base-unit) * 2);
+}
+
+.subtitle {
+  font-size: calc(var(--base-unit) * 4);
+  color: var(--color-gray-800);
+}
+
+.road-warning {
+  width: fit-content;
+  font-size: 12px;
+  color: var(--color-white);
+  padding: 4px 8px;
+  border: 1px solid var(--color-warning-600);
+  background-color: var(--color-warning-600);
+  border-radius: 4px;
+}
+
+.heavy-warning {
+  width: fit-content;
+  font-size: 12px;
+  color: var(--color-white);
+  padding: 4px 8px;
+  border: 1px solid var(--color-error-600);
+  background-color: var(--color-error-600);
+  border-radius: 4px;
+}

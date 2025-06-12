@@ -1,0 +1,15 @@
+@import url(./style/index.css);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+.test {
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+}
